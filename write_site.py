@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+import os
+path = os.path.expanduser('~/projects/locay-web/index.html')
+with open(path, 'w') as f:
+    f.write("""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
@@ -252,4 +255,5 @@ function handleWaitlist2(e){e.preventDefault();e.target.style.display='none';doc
 function toggleFaq(btn){btn.closest('.faq-item').classList.toggle('open')}
 </script>
 </body>
-</html>
+</html>""")
+print('Done -', os.path.getsize(path), 'bytes')
